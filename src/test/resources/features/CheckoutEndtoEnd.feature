@@ -25,3 +25,7 @@
       When User input "Nurdin" then "MTop" and enter "232323" as zip kode
       Then Verify if the tax a on the ordered item is displayed
       And User finish checkout
+      Given User is already on the last checkout page
+      When The user clicks the menu button
+      Then User click logout option
+      And The user returns to the login page
