@@ -36,7 +36,7 @@ public class LogoutSteps {
     @And("The user returns to the login page")
     public void verifbackTologinPage() throws InterruptedException {
         LogoutPage logoutPage = new LogoutPage(webDriver);
-        logoutPage.verifyBacktoLoginPage();
+        Assert.assertTrue(logoutPage.verifyBacktoLoginPage());
         Thread.sleep(1000);
     }
 }
