@@ -26,15 +26,18 @@ public class LogoutPage {
     private WebElement verifBacktoLoginPage;
 
     public boolean verifyChekOutEndPage() {
+
         return verifEndPageCheckout.isDisplayed();
     }
     public void clickBtnMenu(){
+
         btnMenu.click();
     }
     public void clickBtnLogout() {
         btnLogout.click();
     }
     public boolean verifyBacktoLoginPage() {
+
         return verifBacktoLoginPage.isDisplayed();
     }
 }

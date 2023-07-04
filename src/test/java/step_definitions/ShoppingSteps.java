@@ -16,18 +16,18 @@ public class ShoppingSteps {
         this.webDriver = Hooks.webDriver;
 
     }
-    @Then("The user removes an item that does not become purchased")
+    @When("User deletes one product with the name Test all the things T-Shirt Red")
     public void verifyRemoveItem(){
         ShoppingPage shoppingPage = new ShoppingPage(webDriver);
         Assert.assertTrue(shoppingPage.verifRemoveItem());
         shoppingPage.clickBtnRemoveItem();
     }
-    @And("The user checks out to buy the item he wants")
+    @And("User checks out the product")
     public void verifyCheckOut(){
         ShoppingPage shoppingPage = new ShoppingPage(webDriver);
         shoppingPage.clickBtnCheckOut();
     }
-    @Given("The user is already on the checkout page")
+    @Then("User is already on the checkout page")
     public void verifyCheckOutPage(){
         ShoppingPage shoppingPage = new ShoppingPage(webDriver);
         Assert.assertTrue(shoppingPage.verifChekOutPage());

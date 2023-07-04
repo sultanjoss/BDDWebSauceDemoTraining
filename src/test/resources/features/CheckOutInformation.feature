@@ -1,7 +1,7 @@
 @CheckOut
   Feature: testing check
 
-    Scenario Outline: checkout login
+    Scenario Outline: checkout invalid information
       Given User already on login page
       When User input "standard_user" as userName and input "secret_sauce" as password
       Then User already on product page

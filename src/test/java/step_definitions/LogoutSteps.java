@@ -15,28 +15,25 @@ public class LogoutSteps {
         super();
         this.webDriver = Hooks.webDriver;
     }
-    @Given("User is already on the last checkout page")
-    public void verifyCheckoutEndPage() throws InterruptedException {
+    @And("User is already on the last checkout page")
+    public void verifyCheckoutEndPage(){
         LogoutPage logoutPage = new LogoutPage(webDriver);
         Assert.assertTrue(logoutPage.verifyChekOutEndPage());
-        Thread.sleep(1000);
     }
-    @When("The user clicks the menu button")
-    public void ClickBtnMenu() throws InterruptedException {
+    @And("User clicks the menu button")
+    public void ClickBtnMenu() {
         LogoutPage logoutPage = new LogoutPage(webDriver);
         logoutPage.clickBtnMenu();
-        Thread.sleep(1000);
     }
     @Then("User click logout option")
-    public void ClickBtnLogout() throws InterruptedException {
+    public void ClickBtnLogout(){
         LogoutPage logoutPage = new LogoutPage(webDriver);
         logoutPage.clickBtnLogout();
-        Thread.sleep(1000);
+
     }
-    @And("The user returns to the login page")
-    public void verifbackTologinPage() throws InterruptedException {
+    @Then("User returns to the login page")
+    public void verifbackTologinPage(){
         LogoutPage logoutPage = new LogoutPage(webDriver);
         Assert.assertTrue(logoutPage.verifyBacktoLoginPage());
-        Thread.sleep(1000);
     }
 }

@@ -15,19 +15,19 @@ public class AddToCartSteps {
 
     }
 
-    @When("The user has selected the product list with the option {string}")
+    @When("User has selected the product list with the option {string}")
     public void produkSelect(String select) {
         AddToCartPage addToCartPage = new AddToCartPage(webDriver);
         addToCartPage.selectFilterProduk(select);
     }
 
-    @Then("User selects two items in want")
+    @And("User selects two products, first Test all the things T-Shirt Red and second Suce Labs Onesie")
     public void inputBaju() {
         AddToCartPage addToCartpage = new AddToCartPage(webDriver);
         addToCartpage.clickAddToCartSatu();
         addToCartpage.clickAddToCartDua();
     }
-    @And("User is already on shopping chart page")
+    @Then("User is already on your cart page")
     public void shoppingPage(){
         AddToCartPage addToCartPage = new AddToCartPage(webDriver);
         addToCartPage.clickShoppingPage();
